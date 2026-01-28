@@ -14,7 +14,7 @@ This skill provides headless automation for Tuta Mail using Playwright.
 
 ## Commands
 
-The skill uses a bundled script located at `scripts/tuta-cli/index.js`.
+The skill uses a bundled script located at `scripts/index.js`.
 
 ### List Inbox
 
@@ -23,15 +23,21 @@ List the latest emails from the inbox.
 ```bash
 export TUTA_EMAIL="your@email.com"
 export TUTA_PASSWORD="yourpassword"
-node scripts/tuta-cli/index.js list --limit 5
+node skills/tuta-mail/scripts/index.js list --limit 5
 ```
 
-### Read Email (Coming Soon)
+### Read Email
 
 Fetch the body of a specific email.
 
 ```bash
-node scripts/tuta-cli/index.js read --id <email-id>
+node skills/tuta-mail/scripts/index.js read <index>
+```
+
+### Send Email
+
+```bash
+node skills/tuta-mail/scripts/index.js send --to "recipient@example.com" --subject "Hello" --body "Message body here"
 ```
 
 ## Note on Automation
