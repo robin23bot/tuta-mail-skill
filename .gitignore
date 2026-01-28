@@ -1,0 +1,5 @@
+# GitHub ignores
+node_modules/
+.env
+*-error.png
+.DS_Store
